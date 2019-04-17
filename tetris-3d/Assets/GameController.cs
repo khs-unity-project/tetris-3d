@@ -10,15 +10,36 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 12; i++)
         {
             GameObject wallPiece = Instantiate(borderPrefab);
             wallPiece.transform.position = new Vector3(
                 xpos + i,
-                ypos + i + 1,
+                ypos + 1,
                 0
                 );
         }
+
+        for (int k = 1; k < 24; k++)
+        {
+            GameObject wallPiece = Instantiate(borderPrefab);
+            wallPiece.transform.position = new Vector3(
+                xpos,
+                ypos + k + 1,
+                0
+                );
+        }
+
+        for (int j = 1; j < 24; j++)
+        {
+            GameObject wallPiece = Instantiate(borderPrefab);
+            wallPiece.transform.position = new Vector3(
+                xpos + 11,
+                ypos + j + 1,
+                0
+                );
+        }
+
 	}
 	
 	// Update is called once per frame
