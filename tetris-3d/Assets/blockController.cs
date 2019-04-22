@@ -12,10 +12,21 @@ public class blockMove : MonoBehaviour {
     public float rotatingSpeed = 140f;
     public bool blockCollide = false;
 
+
     // Use this for initialization
     void Start () {
         blockCollide = false;
-	}
+
+        GameObject blockObject = Instantiate(blockPrefab);
+
+        
+
+
+        blockObject.transform.position = new Vector3(0, 10, 0);
+
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -66,7 +77,6 @@ public class blockMove : MonoBehaviour {
             blockCollide = true;
 
             GameObject blockObject = Instantiate(blockPrefab);
-            //   blockObject.transform.position = transform.TransformPoint(0,10,0);
             blockObject.transform.position = new Vector3(0,10,0);
         }
     }
