@@ -10,7 +10,7 @@ public class CheckerController : MonoBehaviour {
         //{
             GameObject checkerPiece = Instantiate(checkerPrefab);
             checkerPiece.transform.position = new Vector3(
-                0,
+                4.4,
                 10,
                 0
                 );
