@@ -276,15 +276,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c37a8adea982c41b1262205a8feea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkerPrefab: {fileID: 0}
+  checkerPrefab: {fileID: 1825130181320080, guid: 78257af89567ba44998fbd6f49be1121,
+    type: 2}
 --- !u!4 &383883090
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383883088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.729785, y: 29.456656, z: 1.0933356}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.729785, y: 29.456656, z: 1.0933361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -392,13 +393,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611929589}
-  m_LocalRotation: {x: -0.102176115, y: -0.0029266698, z: 0.006880143, w: 0.9947382}
-  m_LocalPosition: {x: 7, y: 14, z: 20}
+  m_LocalRotation: {x: -0.10215274, y: 0, z: 0, w: 0.99476874}
+  m_LocalPosition: {x: 6, y: 9, z: 43.5}
   m_LocalScale: {x: 10, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 524709990}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -11.726306, y: -0.423, z: 0.836}
+  m_LocalEulerAnglesHint: {x: -11.726306, y: 0, z: 0}
 --- !u!81 &611929591
 AudioListener:
   m_ObjectHideFlags: 0
@@ -428,7 +429,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 80
-  field of view: 50
+  field of view: 50.003983
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -552,7 +553,7 @@ GameObject:
   - component: {fileID: 1764207577}
   - component: {fileID: 1764207576}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 1764207575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: 25, z: 25}
-  m_LocalScale: {x: 50, y: 50, z: 0.01}
+  m_LocalScale: {x: 60, y: 50, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
