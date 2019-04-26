@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
     public GameObject borderPrefab;
-    public int xpos;
-    public int ypos;
+    public int bxpos;
+    public int bypos;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,8 @@ public class GameController : MonoBehaviour {
         {
             GameObject wallPiece = Instantiate(borderPrefab);
             wallPiece.transform.position = new Vector3(
-                xpos + i,
-                ypos + 1,
+                bxpos + i,
+                bypos + 1,
                 0
                 );
         }
@@ -24,8 +24,8 @@ public class GameController : MonoBehaviour {
         {
             GameObject wallPiece = Instantiate(borderPrefab);
             wallPiece.transform.position = new Vector3(
-                xpos,
-                ypos + k + 1,
+                bxpos,
+                bypos + k + 1,
                 0
                 );
         }
@@ -34,8 +34,8 @@ public class GameController : MonoBehaviour {
         {
             GameObject wallPiece = Instantiate(borderPrefab);
             wallPiece.transform.position = new Vector3(
-                xpos + 11,
-                ypos + j + 1,
+                bxpos + 11,
+                bypos + j + 1,
                 0
                 );
         }
