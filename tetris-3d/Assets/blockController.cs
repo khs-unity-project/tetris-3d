@@ -12,6 +12,8 @@ public class blockController : MonoBehaviour {
     public float rotatingSpeed = 140f;
     public bool blockCollide = false;
     public string detecter = "Untagged";
+    public int blockLength = 6;
+    public int blockHeight = 25;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +24,7 @@ public class blockController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        blockPrefab.transform.Translate(0, -fallSpeed * Time.deltaTime, 0, Space.World);
         if (blockCollide == false)
         {
 
@@ -38,7 +41,7 @@ public class blockController : MonoBehaviour {
                 blockPrefab.transform.Translate(-speed * Time.deltaTime, 0, 0, Space.World);
             }
 
-            blockPrefab.transform.Translate(0, -fallSpeed * Time.deltaTime, 0, Space.World);
+           
 
 
 
@@ -62,7 +65,7 @@ public class blockController : MonoBehaviour {
             blockCollide = true;
 
             GameObject blockPiece = Instantiate(blockPrefab);
-            blockPiece.transform.position = new Vector3(0, 10, 0);
+            blockPiece.transform.position = new Vector3(blockLength, blockHeight, 0);
 
             detecter = "null";
         }
