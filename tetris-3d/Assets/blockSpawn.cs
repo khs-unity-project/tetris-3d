@@ -25,17 +25,7 @@ public class blockSpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
     }
-  /*  void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "TriggerExplosion")
-        {
-            blockCollide = true;
-
-            GameObject blockPiece = Instantiate(blockPrefab);
-            blockPiece.transform.position = new Vector3(0, 10, 0);
-        }
-    }
-*/
+ 
     string ImproveName(string originalString)
     {
         return "-[" + originalString + "]-";
