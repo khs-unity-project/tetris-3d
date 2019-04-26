@@ -12,12 +12,13 @@ public class GameController : MonoBehaviour {
 	void Start () {
         for (int i = 0; i < 12; i++)
         {
-            GameObject wallPiece = Instantiate(borderPrefab);
-            wallPiece.transform.position = new Vector3(
+            GameObject bottomWallPiece = Instantiate(borderPrefab);
+            bottomWallPiece.transform.position = new Vector3(
                 bxpos + i,
                 bypos + 1,
                 0
                 );
+
         }
 
         for (int k = 1; k < 24; k++)
