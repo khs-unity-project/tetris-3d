@@ -220,8 +220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   borderPrefab: {fileID: 1937397803217930, guid: 1149f639ad6674443912df449a953124,
     type: 2}
-  xpos: 0
-  ypos: 0
+  bxpos: 0
+  bypos: 0
 --- !u!4 &312269229
 Transform:
   m_ObjectHideFlags: 0
@@ -247,8 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   borderPrefab: {fileID: 0}
-  xpos: 0
-  ypos: 0
+  bxpos: 0
+  bypos: 0
 --- !u!1 &383883088
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkerPrefab: {fileID: 1825130181320080, guid: 78257af89567ba44998fbd6f49be1121,
     type: 2}
+  cxpos: 0
+  cypos: 0
 --- !u!4 &383883090
 Transform:
   m_ObjectHideFlags: 0
@@ -370,6 +372,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 11.466001, y: 0, z: 0}
+--- !u!1 &596812003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596812006}
+  - component: {fileID: 596812005}
+  - component: {fileID: 596812004}
+  m_Layer: 0
+  m_Name: spawnPiece
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &596812004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596812003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf76bf9ea2e51d1469b365a144b77282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockPrefab: {fileID: 1247405389710950, guid: 020b6c279b7e8224f9497ca31a9f18b4,
+    type: 2}
+  spawnLength: 6
+  spawnHeight: 25
+  newName: blockPiece
+  blockCollide: 0
+--- !u!114 &596812005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596812003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cea0d26534a6340912dabb96f40133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newName: tetrisPiece
+--- !u!4 &596812006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596812003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.749949, y: 22.185865, z: -207.1399}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611929589
 GameObject:
   m_ObjectHideFlags: 0
