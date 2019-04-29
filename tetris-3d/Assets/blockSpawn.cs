@@ -19,7 +19,7 @@ public class blockSpawn : MonoBehaviour {
         transform.name = ImproveName(newName);
 
         GameObject blockPiece = Instantiate(blockPrefab);
-        blockPiece.transform.position = new Vector3(spawnLength, spawnHeight, 0);
+        blockPiece.transform.position = new Vector3(spawnLength, spawnHeight, .5);
     }
 	
 	// Update is called once per frame
