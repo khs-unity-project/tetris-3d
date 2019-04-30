@@ -66,16 +66,16 @@ public class blockController : MonoBehaviour {
         {
             blockCollide = true;
 
-            rndNum = Random.Range(0, 2);
+         //   rndNum = Random.Range(0, 2);
 
-            if (rndNum == 0)
-            { 
+         //   if (rndNum == 0)
+         //   { 
             SpawnBlock();
-            }
-            else if (rndNum == 1)
-                {
-                spawnTree();
-            }
+          //  }
+         //   else if (rndNum == 1)
+          //      {
+           //     spawnTree();
+           // }
 
             detecter = "null";
         }
@@ -84,13 +84,13 @@ public class blockController : MonoBehaviour {
     public void SpawnBlock()
     {
         GameObject blockPiece = Instantiate(blockPrefab);
-        blockPiece.transform.position = new Vector3(blockLength, blockHeight+50, 0);
+        blockPiece.transform.position = new Vector3(blockLength, blockHeight+10, 0);
     }
 
     public void spawnTree()
     {
         GameObject treePiece = Instantiate(treePrefab);
-        treePiece.transform.position = new Vector3(blockLength, blockHeight+100, 0);
+        treePiece.transform.position = new Vector3(blockLength, blockHeight+20, 0);
     }
 
 

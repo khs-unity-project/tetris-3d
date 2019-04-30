@@ -5,6 +5,7 @@ using UnityEngine;
 public class blockSpawn : MonoBehaviour {
 
     public GameObject blockPrefab;
+    public GameObject treePrefab;
 
     public int spawnLength = 6;
     public int spawnHeight = 25;
