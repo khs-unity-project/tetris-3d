@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 1247405389710950}
-  fallSpeed: 5
-  speed: 3.5
+  fallSpeed: 3
+  speed: 7
   rotatingSpeed: 140
   blockCollide: 0
   detecter: Untagged
