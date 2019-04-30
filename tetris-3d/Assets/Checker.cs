@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Checker : MonoBehaviour {
     public string newName = "Checkey";
+    public string rowName;
+    public string collumnName;
     // Use this for initialization
     void Start () {
         transform.name = ImproveName(newName);
@@ -16,6 +19,6 @@ public class Checker : MonoBehaviour {
 
     string ImproveName(string originalString)
     {
-        return "-[" + originalString + "]-";
+        return originalString + "" + rowName + "" + collumnName;
     }
 }

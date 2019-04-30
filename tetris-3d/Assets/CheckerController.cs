@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CheckerController : MonoBehaviour {
     public GameObject checkerPrefab;
+    public bool isDead;
+    public string rowName;
+    public string collumnName;
     public int cxpos;
     public int cypos;
     // Use this for initialization
@@ -20,8 +23,15 @@ public class CheckerController : MonoBehaviour {
                     cypos + i + 2,
                     1
                     );
+                //Debug.Log(rowName + collumnName);
+                //rowName = rowName + Convert.ToString();
+                
             }
+           //collumnName = rowName + j.ToString();
         }
+
+
+
     }
 	
 	// Update is called once per frame
