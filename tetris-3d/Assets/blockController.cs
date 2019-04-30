@@ -5,6 +5,7 @@ using UnityEngine;
 public class blockController : MonoBehaviour {
 
     public GameObject blockPrefab;
+    public GameObject treePrefab;
 
 
     public float fallSpeed = 1;
@@ -14,6 +15,7 @@ public class blockController : MonoBehaviour {
     public string detecter = "Untagged";
     public int blockLength = 6;
     public int blockHeight = 25;
+    public float rndNum;
 
     // Use this for initialization
     void Start () {
@@ -64,12 +66,36 @@ public class blockController : MonoBehaviour {
         {
             blockCollide = true;
 
-            GameObject blockPiece = Instantiate(blockPrefab);
-            blockPiece.transform.position = new Vector3(blockLength, blockHeight, 0);
+            rndNum = Random.Range(0, 2);
+
+            if (rndNum == 0)
+            { 
+            SpawnBlock();
+            }
+            else if (rndNum == 1)
+                {
+                spawnTree();
+            }
 
             detecter = "null";
         }
     }
+
+    public void SpawnBlock()
+    {
+        GameObject blockPiece = Instantiate(blockPrefab);
+        blockPiece.transform.position = new Vector3(blockLength, blockHeight+50, 0);
+    }
+
+    public void spawnTree()
+    {
+        GameObject treePiece = Instantiate(treePrefab);
+        treePiece.transform.position = new Vector3(blockLength, blockHeight+100, 0);
+    }
+
+
+
+
 
 
 
