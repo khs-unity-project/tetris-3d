@@ -5,6 +5,7 @@ using UnityEngine;
 public class blockController : MonoBehaviour {
 
     public GameObject blockPrefab;
+    public GameObject treePrefab;
 
 
     public float fallSpeed = 1;
@@ -14,7 +15,8 @@ public class blockController : MonoBehaviour {
     public string detecter = "Untagged";
     public int blockLength = 6;
     public int blockHeight = 25;
-
+    public float rndNum;
+    
     // Use this for initialization
     void Start () {
         blockCollide = false;
@@ -23,6 +25,9 @@ public class blockController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+
 
         blockPrefab.transform.Translate(0, -fallSpeed * Time.deltaTime, 0, Space.World);
         if (blockCollide == false)
@@ -41,10 +46,6 @@ public class blockController : MonoBehaviour {
                 blockPrefab.transform.Translate(-speed * Time.deltaTime, 0, 0, Space.World);
             }
 
-           
-
-
-
             if (Input.GetKey("z"))
             {
                 blockPrefab.transform.RotateAround(transform.position, Vector3.forward, rotatingSpeed * Time.deltaTime);
@@ -57,6 +58,37 @@ public class blockController : MonoBehaviour {
 
         }
 
+        treePrefab.transform.Translate(0, -fallSpeed * Time.deltaTime, 0, Space.World);
+        if (blockCollide == false)
+        {
+
+            if (Input.GetKey("down"))
+            {
+                treePrefab.transform.Translate(0, -speed * Time.deltaTime, 0, Space.World);
+            }
+            if (Input.GetKey("right"))
+            {
+                treePrefab.transform.Translate(speed * Time.deltaTime, 0, 0, Space.World);
+            }
+            if (Input.GetKey("left"))
+            {
+                treePrefab.transform.Translate(-speed * Time.deltaTime, 0, 0, Space.World);
+            }
+
+            if (Input.GetKey("z"))
+            {
+                treePrefab.transform.RotateAround(transform.position, Vector3.forward, rotatingSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKey("c"))
+            {
+                treePrefab.transform.RotateAround(transform.position, Vector3.forward, -rotatingSpeed * Time.deltaTime);
+            }
+
+        }
+
+
+
     }
       void OnCollisionEnter(Collision collision)
     {
@@ -64,12 +96,38 @@ public class blockController : MonoBehaviour {
         {
             blockCollide = true;
 
-            GameObject blockPiece = Instantiate(blockPrefab);
-            blockPiece.transform.position = new Vector3(blockLength, blockHeight, 0);
+            rndNum = Random.Range(0, 2);
+
+            if (rndNum == 0)
+            { 
+            SpawnBlock();
+            }
+            else if (rndNum == 1)
+              {
+                spawnTree();
+              }
+
+
 
             detecter = "null";
         }
     }
+
+    public void SpawnBlock()
+    {
+        GameObject blockPiece = Instantiate(blockPrefab);
+        blockPiece.transform.position = new Vector3(blockLength, blockHeight, 0);
+    }
+
+    public void spawnTree()
+    {
+        GameObject treePiece = Instantiate(treePrefab);
+        treePiece.transform.position = new Vector3(blockLength, blockHeight, 0);
+    }
+
+
+
+
 
 
 

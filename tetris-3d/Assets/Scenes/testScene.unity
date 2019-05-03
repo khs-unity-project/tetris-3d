@@ -291,7 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9790b9d304aa7749873919929e053b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  borderPrefab: {fileID: 0}
+  borderPrefab: {fileID: 1937397803217930, guid: 1149f639ad6674443912df449a953124,
+    type: 2}
   bxpos: 0
   bypos: 0
 --- !u!1 &383883088
@@ -450,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 1247405389710950, guid: 020b6c279b7e8224f9497ca31a9f18b4,
     type: 2}
+  treePrefab: {fileID: 1392231128340016, guid: 8886901fefd4c754bb8831f326de600d, type: 2}
   spawnLength: 6
   spawnHeight: 25
   newName: blockPiece
@@ -465,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4cea0d26534a6340912dabb96f40133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newName: tetrisPiece
+  newName: blockPiece
 --- !u!4 &596812006
 Transform:
   m_ObjectHideFlags: 0
