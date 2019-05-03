@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 312269228}
   - component: {fileID: 312269230}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: BorderController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,6 +323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkerPrefab: {fileID: 1825130181320080, guid: 78257af89567ba44998fbd6f49be1121,
     type: 2}
+  isDead: 0
+  rowName: 
+  collumnName: 
   cxpos: 0
   cypos: 0
 --- !u!4 &383883090
@@ -474,7 +477,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611929589
 GameObject:

@@ -24,10 +24,10 @@ public class CheckerController : MonoBehaviour {
                     1
                     );
                 //Debug.Log(rowName + collumnName);
-                //rowName = rowName + Convert.ToString();
+                //rowName = rowName + j.ToString();
                 
             }
-           //collumnName = rowName + j.ToString();
+           //collumnName = rowName + i.ToString();
         }
 
 
