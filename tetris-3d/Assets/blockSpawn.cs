@@ -12,6 +12,8 @@ public class blockSpawn : MonoBehaviour {
 
     public string newName = "blockPiece";
 
+
+
     public bool blockCollide = false;
     // Use this for initialization
     void Start () {
