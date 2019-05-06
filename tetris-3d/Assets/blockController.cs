@@ -12,22 +12,24 @@ public class blockController : MonoBehaviour {
     public float speed = 3.5f;
     public float rotatingSpeed = 140f;
     public bool blockCollide = false;
-    public string detecter = "Untagged";
+    public string detecter = "Respawn";
     public int blockLength = 6;
     public int blockHeight = 25;
     public float rndNum;
+   
     
     // Use this for initialization
     void Start () {
         blockCollide = false;
-        detecter = "Untagged";
+        detecter = "Respawn";
+        fallSpeed = 3;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-
-
+        
+        
 
         blockPrefab.transform.Translate(0, -fallSpeed * Time.deltaTime, 0, Space.World);
         if (blockCollide == false)
@@ -95,7 +97,8 @@ public class blockController : MonoBehaviour {
         if (collision.transform.tag == detecter)
         {
             blockCollide = true;
-
+            
+            
             rndNum = Random.Range(0, 2);
 
             if (rndNum == 0)
@@ -117,12 +120,14 @@ public class blockController : MonoBehaviour {
     {
         GameObject blockPiece = Instantiate(blockPrefab);
         blockPiece.transform.position = new Vector3(blockLength, blockHeight, 0);
+        blockPiece.tag = "Respawn";
     }
 
     public void spawnTree()
     {
         GameObject treePiece = Instantiate(treePrefab);
         treePiece.transform.position = new Vector3(blockLength, blockHeight, 0);
+        treePiece.tag = "Respawn";
     }
 
 
